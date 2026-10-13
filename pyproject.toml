@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdl2-game-engine-starter"
+version = "0.6.2"
+description = "Build orchestration + project generator for a C++/SDL2 custom game engine starter"
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "sdl2-game-engine-starter contributors" }]
+keywords = ["sdl2", "game-engine", "cpp", "starter", "tooling"]
+
+dependencies = [
+    "click>=8.1",
+    "tomli>=2.0; python_version < '3.11'",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+    "black>=24.4",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+sdl2-starter = "src.bootstrap.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
