@@ -1,0 +1,1 @@
+"""Core engine abstraction layer for the starter tooling."""
