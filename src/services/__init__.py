@@ -1,0 +1,1 @@
+"""Service layer: project generation, build orchestration, asset pipeline."""
