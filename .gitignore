@@ -1,0 +1,35 @@
+# sdl2-game-engine-starter — build + dev artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# CMake / SDL2 build trees
+out/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# tooling output
+.sdl2_starter_cache/
+engine_report.json
+*.log
